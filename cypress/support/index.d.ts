@@ -1,7 +1,6 @@
 declare namespace Cypress {
-    interface Chainable<Subject> {
-        //validateUser(userName: string): Chainable<boolean>;
-        
-       // Other commands
+    interface Chainable {
+        customCommandType(customVar: string): void;
+        getToken(): Chainable<Response<element>>;
     }
 }

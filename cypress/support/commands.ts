@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("customCommandType", (customVar) => {
+    return customVar
+})
+
+Cypress.Commands.add("getToken", () => {
+    return cy.request({
+        method: 'POST',
+        url: `/login`,
+        headers: {
+            'Content-Type': 'application/json'   
+        },               
+        body: {
+            "username": "fellipe.mendes@ciandt.com.br",
+            "password": "123456"
+        }
+    })
+})

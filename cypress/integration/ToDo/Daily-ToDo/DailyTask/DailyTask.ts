@@ -1,15 +1,13 @@
 import { Given, When, Then, Before } from 'cypress-cucumber-preprocessor/steps';
-import GetToken from "../../../../support/service/getToken"
 import ToDoRest from "../../../../support/service/ToDoRest"
 
-let Token = new GetToken()
 let apiRest = new ToDoRest()
 
 Before(function() {
     this.url = Cypress.env('baseUrl');
-    Token.getToken().as('token')
+    cy.getToken().as('token')
 })
-    
+
 Given(/^I filled in the information about new Daily ToDo$/, function() {
     apiRest.executePost(
         {
