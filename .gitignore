@@ -2,8 +2,9 @@
 allure-report/
 allure-results/
 
-# Videos
-cypress/videos
+# Videos Screenshots
+videos
+screenshots
 
 # Dependency directories
 node_modules/
