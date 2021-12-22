@@ -19,6 +19,7 @@ All the shared step definitions have to be in `cypress\integration\common`
 *It's a good place to put global hooks*
 
 <br>
+
 ## Run the following commands in a terminal
 
 
