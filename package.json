@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "open": "cypress open",
     "allure:clean": "rimraf allure-results/ allure-report/ || true",
-		"allure:report": "allure generate allure-results",
-		"allure:open": "allure open allure-report",
-		"allure:serve": "allure serve allure-results"
+    "allure:report": "allure generate allure-results",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
   },
   "keywords": [],
   "author": "",
@@ -21,8 +21,10 @@
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.23.0",
     "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "@types/faker": "^5.5.9",
     "allure-commandline": "^2.17.2",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "faker": "^5.5.3",
     "typescript": "^4.5.4"
   },
   "cypress-cucumber-preprocessor": {

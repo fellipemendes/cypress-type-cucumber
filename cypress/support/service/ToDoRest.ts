@@ -3,7 +3,7 @@ export default class ToDoRest {
     
     constructor(){ }
 
-    executeGet(param, token){
+    executeGet(param: string, token: any){
         return cy.request({
             method: 'GET',
             url: `/todos${param}`,
@@ -14,7 +14,7 @@ export default class ToDoRest {
         }).as('responseRequest')
     }
 
-    executePost(body, token){
+    executePost(body: { todoId: number; description: string; days: number }, token: any){
         return cy.request({
             method: 'POST',
             url: `/todos`,
@@ -27,7 +27,7 @@ export default class ToDoRest {
         }).as('responseRequest')
     }
 
-    executePut(ID, body, token){
+    executePut(ID: number, body: { description: string; done: boolean }, token: any){
         return cy.request({
             method: 'PUT',
             url: `/todos/${ID}`,
@@ -39,7 +39,7 @@ export default class ToDoRest {
             failOnStatusCode: false
         }).as('responseRequest')
     }
-    executeDelete(ID, token){
+    executeDelete(ID: any, token: any){
         return cy.request({
             method: 'DELETE',
             url: `/todos/${ID}`,
